@@ -1,11 +1,5 @@
 import HttpClient from './http-client';
-import * as dotenv from 'dotenv';
-dotenv.config();
 
-
-export interface ProcessEnv {
-    [key: string]: string | undefined;
-}
 
 const base: string = "https://jsonmock.hackerrank.com/api/countries/search"
 
@@ -25,7 +19,6 @@ class Country extends HttpClient {
     }
   }
     
-
 
   getCountry = async(s: string, p: number) => {
     let totalCountries: number = 0; 
